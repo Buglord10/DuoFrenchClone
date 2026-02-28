@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Élan Français</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <h1>Élan Français</h1>
+        <p class="subtitle">French-only gamified learning</p>
+      </div>
+      <div class="score-pill">
+        <span id="fsValue">0</span>
+        <small>French Score</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero card">
+        <div>
+          <h2 id="heroTitle">Bienvenue! Continue your path.</h2>
+          <p id="heroMeta"></p>
+        </div>
+        <button id="startNextLesson" class="btn primary">Start next lesson</button>
+      </section>
+
+      <section class="stats-grid">
+        <article class="card stat">
+          <h3>Streak</h3>
+          <p><span id="streakValue">0</span> days</p>
+          <small id="freezeValue">Freezes: 0</small>
+        </article>
+        <article class="card stat">
+          <h3>League</h3>
+          <p id="leagueTier">Seed</p>
+          <small id="leagueRank">Rank #--</small>
+        </article>
+        <article class="card stat">
+          <h3>Daily Goal</h3>
+          <p><span id="goalProgress">0</span>/<span id="goalTarget">40</span> FS</p>
+          <small id="goalStatus">Not started</small>
+        </article>
+      </section>
+
+      <nav class="tabs">
+        <button class="tab active" data-tab="learn">Learn</button>
+        <button class="tab" data-tab="practice">Practice</button>
+        <button class="tab" data-tab="leagues">Leagues</button>
+        <button class="tab" data-tab="profile">Profile</button>
+      </nav>
+
+      <section id="learn" class="panel active"></section>
+      <section id="practice" class="panel"></section>
+      <section id="leagues" class="panel"></section>
+      <section id="profile" class="panel"></section>
+    </main>
+
+    <div id="lessonModal" class="modal hidden" role="dialog" aria-modal="true"></div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
